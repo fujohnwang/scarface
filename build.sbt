@@ -20,12 +20,17 @@ resolvers += "Akka.IO Repo" at "http://akka.io/repository"
 
 resolvers += "Local Maven Repo" at "file://"+Path.userHome+"/.m2/repository"
 
-libraryDependencies ++= Seq(
-                            "ch.qos.logback" % "logback-core" % "1.0.0",
-                            "ch.qos.logback" % "logback-classic" % "1.0.0",
-                            "org.slf4j" % "jcl-over-slf4j" %"1.6.2",
-                            "org.slf4j" % "log4j-over-slf4j" %"1.6.2"
-                            )
+libraryDependencies += "ch.qos.logback" % "logback-core" % "1.0.0"
+
+libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.0.0"
+
+libraryDependencies += "org.slf4j" % "jcl-over-slf4j" %"1.6.2"
+
+libraryDependencies += "org.slf4j" % "log4j-over-slf4j" %"1.6.2"
+
+libraryDependencies += "com.typesafe.akka" % "akka-actor_2.10" % "2.1.0"
+
+libraryDependencies += "com.typesafe.akka" % "akka-agent_2.10" % "2.1.0"
 
 libraryDependencies += "org.springframework" % "spring-context" % "3.1.3.RELEASE"
 
