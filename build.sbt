@@ -37,3 +37,6 @@ libraryDependencies += "org.springframework" % "spring-context" % "3.1.3.RELEASE
 libraryDependencies += "com.yammer.metrics" % "metrics-core" % "2.1.1"
 
 libraryDependencies +=  "org.scalatest" % "scalatest_2.10.0-RC3" % "1.8-B1" % "test"
+
+net.virtualvoid.sbt.graph.Plugin.graphSettings
+
