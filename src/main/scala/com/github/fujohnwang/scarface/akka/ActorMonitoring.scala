@@ -27,7 +27,11 @@ class ActorWatcher(watchedActor: ActorRef) extends Actor with ActorLogging {
   }
 }
 
-
+/**
+ * refer to <a href="http://blog.evilmonkeylabs.com/2013/01/17/Distributing_Akka_Workloads_And_Shutting_Down_After/">http://blog.evilmonkeylabs.com/2013/01/17/Distributing_Akka_Workloads_And_Shutting_Down_After/</a>
+ *
+ * a great post on this issue!
+ */
 object ActorMonitoring {
   def main(args: Array[String]) {
     val actorSystem = ActorSystem("test-system")
