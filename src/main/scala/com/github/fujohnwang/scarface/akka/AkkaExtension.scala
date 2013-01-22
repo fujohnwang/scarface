@@ -10,13 +10,15 @@ import com.typesafe.config.Config
  * @param config, just for configuration information to use, not mandatory constructor parameter
  */
 class MyExtension(config: Config) extends Extension {
-  println("initialize extension")    // it will be singleton-scoped, so only execute once.
+  println("initialize extension")
+  // it will be singleton-scoped, so only execute once.
   val name = config.getString("akka.extension.mine.name")
 }
 
-object MyExtension extends AbstractExtensionId[MyExtension] with ExtensionIdProvider {
-  def lookup() = this
-
+/**
+ * should be same id so that the system will not load the extension multiple times.
+ */
+object MyExtensionId extends ExtensionId[MyExtension] {
   def createExtension(system: ExtendedActorSystem) = new MyExtension(system.settings.config)
 }
 
@@ -28,8 +30,18 @@ object AkkaExtension {
   def main(args: Array[String]) {
     val actorSystem = ActorSystem("akka-extension")
 
+
+    val extension = actorSystem.registerExtension(MyExtensionId)
+
+    //    val extension = MyExtensionId.get(actorSystem) // same to MyExtensionId(actorSystem)
+    println(extension.name)
+
+
+
     class ExtensionUser extends Actor with ActorLogging {
-      val extension = MyExtension(context.system)
+      //      val extension = MyExtensionId(context.system)
+
+      val extension = context.system.extension(MyExtensionId)
 
       def receive = {
         case _ => {
@@ -39,8 +51,7 @@ object AkkaExtension {
       }
     }
 
-    val extension = MyExtension(actorSystem)
-    println(extension.name)
+
 
     val actor = actorSystem.actorOf(Props[ExtensionUser], "ext-user")
     actor ! "test message"
