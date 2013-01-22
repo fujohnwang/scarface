@@ -12,7 +12,7 @@ scalacOptions := Seq("-deprecation", "-unchecked","-optimise")
 
 javacOptions ++= Seq("-source", "1.7", "-target", "1.7")
 
-scalaVersion := "2.10.0-RC3"
+scalaVersion := "2.10.0"
 
 resolvers += "Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/"
 

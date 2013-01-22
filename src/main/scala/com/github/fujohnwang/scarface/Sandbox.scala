@@ -1,6 +1,7 @@
 package com.github.fujohnwang.scarface
 
 import com.typesafe.config.ConfigFactory
+import java.util.Date
 
 
 object Scarface {
