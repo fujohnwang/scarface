@@ -28,11 +28,9 @@ libraryDependencies += "org.slf4j" % "jcl-over-slf4j" %"1.6.2"
 
 libraryDependencies += "org.slf4j" % "log4j-over-slf4j" %"1.6.2"
 
-libraryDependencies += "com.typesafe.akka" % "akka-actor_2.10" % "2.1.0"
+libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.1.0"
 
-libraryDependencies += "com.typesafe.akka" % "akka-agent_2.10" % "2.1.0"
-
-libraryDependencies += "org.springframework" % "spring-context" % "3.1.3.RELEASE"
+libraryDependencies += "org.springframework" % "spring-context" % "3.2.0.RELEASE"
 
 libraryDependencies += "com.yammer.metrics" % "metrics-core" % "2.1.1"
 
