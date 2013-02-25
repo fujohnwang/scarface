@@ -36,5 +36,7 @@ libraryDependencies += "com.yammer.metrics" % "metrics-core" % "2.1.1"
 
 libraryDependencies +=  "org.scalatest" % "scalatest_2.10.0-RC3" % "1.8-B1" % "test"
 
+libraryDependencies += "com.tristanhunt" %% "knockoff" % "0.8.1"
+
 net.virtualvoid.sbt.graph.Plugin.graphSettings
 
