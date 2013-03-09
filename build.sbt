@@ -38,5 +38,11 @@ libraryDependencies +=  "org.scalatest" % "scalatest_2.10.0-RC3" % "1.8-B1" % "t
 
 libraryDependencies += "com.tristanhunt" %% "knockoff" % "0.8.1"
 
+libraryDependencies += "com.google.guava" % "guava" % "14.0"
+
+libraryDependencies += "commons-io" % "commons-io" % "2.4"
+
+libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.1"
+
 net.virtualvoid.sbt.graph.Plugin.graphSettings
 
