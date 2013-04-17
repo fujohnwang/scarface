@@ -44,5 +44,13 @@ libraryDependencies += "commons-io" % "commons-io" % "2.4"
 
 libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.1"
 
+libraryDependencies += "org.parboiled" %% "parboiled-scala" % "1.1.4"
+
+libraryDependencies += "com.ning" % "async-http-client" % "1.7.11"
+
+libraryDependencies += "org.jsoup" % "jsoup" % "1.7.2"
+
+libraryDependencies += "org.eclipse.jgit" % "org.eclipse.jgit" % "2.3.1.201302201838-r"
+
 net.virtualvoid.sbt.graph.Plugin.graphSettings
 
