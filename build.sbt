@@ -34,7 +34,9 @@ libraryDependencies += "org.springframework" % "spring-context" % "3.2.0.RELEASE
 
 libraryDependencies += "com.yammer.metrics" % "metrics-core" % "2.1.1"
 
-libraryDependencies +=  "org.scalatest" % "scalatest_2.10.0-RC3" % "1.8-B1" % "test"
+libraryDependencies += "io.netty" % "netty" % "3.6.3.Final"
+
+libraryDependencies +=  "org.scalatest" %% "scalatest" % "1.9.1" % "test"
 
 libraryDependencies += "com.tristanhunt" %% "knockoff" % "0.8.1"
 
