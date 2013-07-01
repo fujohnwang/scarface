@@ -58,5 +58,7 @@ libraryDependencies += "org.jsoup" % "jsoup" % "1.7.2"
 
 libraryDependencies += "org.eclipse.jgit" % "org.eclipse.jgit" % "2.3.1.201302201838-r"
 
+libraryDependencies += "net.schmizz" % "sshj" % "0.8.1"
+
 net.virtualvoid.sbt.graph.Plugin.graphSettings
 
