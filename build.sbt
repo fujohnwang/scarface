@@ -60,5 +60,13 @@ libraryDependencies += "org.eclipse.jgit" % "org.eclipse.jgit" % "2.3.1.20130220
 
 libraryDependencies += "net.schmizz" % "sshj" % "0.8.1"
 
+libraryDependencies += "org.springframework" % "spring-orm" % "3.0.7.RELEASE"
+
+libraryDependencies += "org.apache.ibatis" % "ibatis-sqlmap" % "2.3.4.726"
+
+libraryDependencies += "org.mvel" % "mvel2" % "2.1.6.Final"
+
+libraryDependencies += "com.h2database" % "h2" % "1.3.172" % "test"
+
 net.virtualvoid.sbt.graph.Plugin.graphSettings
 
