@@ -1,11 +1,13 @@
 package mysdal.routes
 
+import javax.sql.DataSource
+
 trait LoadBalanceStrategy {
-  def loadBalanceAmong(replicas: Set[Replica]): Option[Replica]
+  def loadBalanceAmong(replicas: Set[DataSource]): Option[DataSource]
 }
 
 class AlwaysFirstReplicaLoadBalanceStrategy extends LoadBalanceStrategy {
-  def loadBalanceAmong(replicas: Set[Replica]): Option[Replica] = if (replicas == null || replicas.isEmpty) None else replicas.headOption
+  def loadBalanceAmong(replicas: Set[DataSource]): Option[DataSource] = if (replicas == null || replicas.isEmpty) None else replicas.headOption
 }
 
 
