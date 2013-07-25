@@ -7,6 +7,15 @@ trait Router {
 }
 
 
+/**
+ * SimpleRouter will NOT take care of load balance concern after routing.
+ *
+ * If users want to compose routing and load balancing together as per their database topology,
+ * they can implement another totally-new Router or by reusing some logic in SimpleRouter.
+ *
+ * BUT, remember, if another Router is provided, transaction facility should be synchronized: either involve all of the data sources or use different PlatformTransactionManager as per each scenario.
+ *
+ */
 class SimpleRouter(routeRepository: RouteRepository) extends Router {
   /**
    *
