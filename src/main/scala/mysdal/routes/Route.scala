@@ -23,3 +23,6 @@ case class RouteRepository(namespaceRoutes: Map[String, Set[Route]], namespaceEx
 trait RouteRepositoryBuilder {
   def build(): RouteRepository
 }
+
+
+
