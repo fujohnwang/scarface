@@ -2,7 +2,7 @@ package mysdal.routes
 
 import java.util
 
-case class Route(path: String, expression: String, shards: Set[Shard], var prefix: String, loadBalanceStrategy: LoadBalanceStrategy = new AlwaysFirstReplicaLoadBalanceStrategy, expressionEngine: ExpressionEngine = new MVELExpressionEngine(new util.HashMap[String, AnyRef]()))
+case class Route(path: String, expression: String, shards: Set[Shard], loadBalanceStrategy: LoadBalanceStrategy = new AlwaysFirstReplicaLoadBalanceStrategy, expressionEngine: ExpressionEngine = new MVELExpressionEngine(new util.HashMap[String, AnyRef]()))
 
 case class RouteRepository(namespaceRoutes: Map[String, Set[Route]], namespaceExprRoutes: Map[String, Set[Route]], sqlmapRoutes: Map[String, Set[Route]], sqlmapExprRoutes: Map[String, Set[Route]])
 
