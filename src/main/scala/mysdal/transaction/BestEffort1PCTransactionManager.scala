@@ -4,10 +4,14 @@ import org.springframework.transaction.support.{DefaultTransactionStatus, Abstra
 import org.springframework.transaction.{TransactionException, TransactionStatus, TransactionDefinition}
 import mysdal.routes.Shard
 import org.springframework.jdbc.datasource.DataSourceTransactionManager
-import scala.collection.mutable.ListBuffer
+import collection.mutable._
 
 class BestEffort1PCTransactionManager(shards: Seq[Shard]) extends AbstractPlatformTransactionManager {
+  if (shards == null || shards.isEmpty) throw new IllegalArgumentException("'shards' information is required.")
 
+  /**
+   * should we propagate the settings of the transaction manager to each DataSourceTransactionManager?!
+   */
   val transactionManagers: Seq[AbstractPlatformTransactionManager] = shards.map(_.dataSource).map(new DataSourceTransactionManager(_))
 
   def doGetTransaction(): AnyRef = new ListBuffer[DefaultTransactionStatus]
