@@ -38,7 +38,7 @@ libraryDependencies += "org.springframework" % "spring-context" % "3.2.0.RELEASE
 
 libraryDependencies += "com.yammer.metrics" % "metrics-core" % "2.1.1"
 
-libraryDependencies += "io.netty" % "netty" % "3.6.3.Final"
+libraryDependencies += "io.netty" % "netty-all" % "4.0.6.Final"
 
 libraryDependencies +=  "org.scalatest" %% "scalatest" % "1.9.1" % "test"
 
@@ -65,6 +65,12 @@ libraryDependencies += "org.springframework" % "spring-orm" % "3.0.7.RELEASE"
 libraryDependencies += "org.apache.ibatis" % "ibatis-sqlmap" % "2.3.4.726"
 
 libraryDependencies += "org.mvel" % "mvel2" % "2.1.6.Final"
+
+libraryDependencies += "com.google.zxing" % "core" % "2.2"
+
+libraryDependencies += "com.google.zxing" % "javase" % "2.2"
+
+libraryDependencies += "org.imgscalr" % "imgscalr-lib" % "4.2"
 
 libraryDependencies += "com.h2database" % "h2" % "1.3.172" % "test"
 

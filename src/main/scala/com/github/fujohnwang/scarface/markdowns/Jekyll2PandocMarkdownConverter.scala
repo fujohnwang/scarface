@@ -1,6 +1,6 @@
 package com.github.fujohnwang.scarface.markdowns
 
-import io.Source
+
 import java.io._
 import org.apache.commons.io.FileUtils
 import org.apache.commons.lang3.StringUtils
@@ -18,7 +18,7 @@ object Jekyll2PandocMarkdownConverter {
       def accept(f: File) = f.isFile && (!f.isHidden)
     }).foreach(f => {
       val date = f.getName.substring(0, 10)
-      val lines = Source.fromFile(f, DEFAULT_ENCODING).getLines().toArray
+      val lines = scala.io.Source.fromFile(f, DEFAULT_ENCODING).getLines().toArray
       val title: String = StringUtils.substringAfter(lines(2), "title:").trim
       val filename = StringUtils.substringAfter(lines(3), "permalink:").trim
       val destinationFile: File = new File(destinationDir, f.getName)
