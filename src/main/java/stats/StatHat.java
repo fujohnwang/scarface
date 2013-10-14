@@ -1,3 +1,5 @@
+package stats;
+
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.BufferedReader;
@@ -5,7 +7,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 
-class StatHat {
+public class StatHat {
 
         private static void httpPost(String path, String data) {
                 try {
