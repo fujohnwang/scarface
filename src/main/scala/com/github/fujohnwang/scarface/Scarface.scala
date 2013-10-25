@@ -9,7 +9,7 @@ object Scarface {
     val config = ConfigFactory.load()
     println(config.getString("sample_config"))
 
-    StatHat.ezPostCount("fujohnwang@gmail.com", "weibo access count", 1.0)
+
   }
 }
 
