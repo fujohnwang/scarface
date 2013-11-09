@@ -74,5 +74,7 @@ libraryDependencies += "org.imgscalr" % "imgscalr-lib" % "4.2"
 
 libraryDependencies += "com.h2database" % "h2" % "1.3.172" % "test"
 
+libraryDependencies += "org.elasticsearch" % "elasticsearch" % "0.90.6"
+
 net.virtualvoid.sbt.graph.Plugin.graphSettings
 
