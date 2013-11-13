@@ -76,5 +76,7 @@ libraryDependencies += "com.h2database" % "h2" % "1.3.172" % "test"
 
 libraryDependencies += "org.elasticsearch" % "elasticsearch" % "0.90.6"
 
+libraryDependencies += "org.jdom" % "jdom" % "2.0.2"
+
 net.virtualvoid.sbt.graph.Plugin.graphSettings
 
