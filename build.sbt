@@ -12,7 +12,7 @@ scalacOptions := Seq("-deprecation", "-unchecked","-optimise")
 
 javacOptions ++= Seq("-source", "1.7", "-target", "1.7")
 
-scalaVersion := "2.10.0"
+scalaVersion := "2.10.4"
 
 resolvers += "Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/"
 
@@ -28,11 +28,9 @@ libraryDependencies += "org.slf4j" % "jcl-over-slf4j" %"1.6.2"
 
 libraryDependencies += "org.slf4j" % "log4j-over-slf4j" %"1.6.2"
 
-libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.2.0-RC1"
+libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.3.2"
 
-libraryDependencies += "com.typesafe.akka" %% "akka-remote" % "2.2.0-RC1"
-
-libraryDependencies += "com.typesafe.akka" %% "akka-slf4j" % "2.2.0-RC1"
+libraryDependencies += "com.typesafe.akka" %% "akka-slf4j" % "2.3.2"
 
 libraryDependencies += "org.springframework" % "spring-context" % "3.2.0.RELEASE"
 
@@ -77,6 +75,10 @@ libraryDependencies += "com.h2database" % "h2" % "1.3.172" % "test"
 libraryDependencies += "org.elasticsearch" % "elasticsearch" % "0.90.6"
 
 libraryDependencies += "org.jdom" % "jdom" % "2.0.2"
+
+libraryDependencies += "com.netflix.rxjava" % "rxjava-core" % "0.19.2"
+
+libraryDependencies += "com.netflix.rxjava" % "rxjava-scala" % "0.19.2"
 
 net.virtualvoid.sbt.graph.Plugin.graphSettings
 
