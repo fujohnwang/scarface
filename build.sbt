@@ -20,9 +20,9 @@ resolvers += "Akka.IO Repo" at "http://akka.io/repository"
 
 resolvers += "Local Maven Repo" at "file://"+Path.userHome+"/.m2/repository"
 
-libraryDependencies += "ch.qos.logback" % "logback-core" % "1.0.13"
+libraryDependencies += "ch.qos.logback" % "logback-core" % "1.1.2"
 
-libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.0.13"
+libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.2"
 
 libraryDependencies += "org.slf4j" % "jcl-over-slf4j" %"1.6.2"
 

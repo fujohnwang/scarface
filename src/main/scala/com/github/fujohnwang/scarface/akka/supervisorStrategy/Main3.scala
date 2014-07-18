@@ -2,6 +2,14 @@ package com.github.fujohnwang.scarface.akka.supervisorStrategy
 
 import akka.actor._
 
+object Greeter {
+
+  case object Done
+
+  case object Greet
+
+}
+
 /**
  * 在当前Actor里定义supervisorStrategy只是相当于catch在当前Actor中创建的所有子actors所抛出的exceptions，
  * 但对当前Actor中抛出的Exception无效， 如果想在当前Actor中自己处理预期的异常， 则还是自己try catch比较好！
@@ -10,10 +18,10 @@ import akka.actor._
 class UnstableActor extends Actor with ActorLogging {
   var counter: Long = 0
 
-//  override def supervisorStrategy: SupervisorStrategy = OneForOneStrategy() {
-//    case _: UnstableException => SupervisorStrategy.Resume
-//    case _ => SupervisorStrategy.Stop
-//  }
+  //  override def supervisorStrategy: SupervisorStrategy = OneForOneStrategy() {
+  //    case _: UnstableException => SupervisorStrategy.Resume
+  //    case _ => SupervisorStrategy.Stop
+  //  }
 
   override def receive: Receive = {
     case Greeter.Greet => {
