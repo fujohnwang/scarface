@@ -80,5 +80,9 @@ libraryDependencies += "com.netflix.rxjava" % "rxjava-core" % "0.19.2"
 
 libraryDependencies += "com.netflix.rxjava" % "rxjava-scala" % "0.19.2"
 
+libraryDependencies += "org.apache.kafka" % "kafka_2.10" % "0.8.1.1"
+
+libraryDependencies += "org.apache.hadoop" % "hadoop-client" % "2.4.1"
+
 net.virtualvoid.sbt.graph.Plugin.graphSettings
 
