@@ -17,15 +17,13 @@ class CreditCardValidator {
     if (numberString.length != cardNumberLength) return false
     if (!StringUtils.isNumeric(numberString)) return false
     val digits = numberString.map(c => java.lang.Byte.valueOf(String.valueOf(c)))
-    val total = digits.zipWithIndex.foldLeft(0)((accumulator, e) => {
-      if (e._2 % 2 != 0) {
-        e._1 + accumulator
-      } else {
-        val doubleDigit = e._1 << 1
-        accumulator + (if (doubleDigit > 9) doubleDigit / 10 + doubleDigit % 10 else doubleDigit)
-      }
-    })
+    val total = digits.zipWithIndex.foldLeft(0)((total, e) => if (e._2 % 2 != 0) total + e._1 else total + doubleFlat(e._1))
     if (total % 10 != 0) false else true
+  }
+
+  def doubleFlat(value: Byte) = {
+    val doubleValue = value << 1
+    if (doubleValue > 9) doubleValue / 10 + doubleValue % 10 else doubleValue
   }
 }
 
