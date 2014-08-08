@@ -31,6 +31,7 @@ object CreditCardValidator {
   def main(args: Array[String]) {
     val validator = new CreditCardValidator
     println( s"""validator.validate("4417123456789113")=${validator.validate("4417123456789113")}""")
+    println( s"""validator.validate("4417123456789111")=${validator.validate("4417123456789111")}""")
     println( s"""validate(ssssssssssssssss)=${validator.validate("ssssssssssssssss")}""")
     println( s"""validate(sssssssssssssss)=${validator.validate("sssssssssssssss")}""")
   }

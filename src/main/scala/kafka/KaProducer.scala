@@ -11,10 +11,10 @@ import kafka.producer.{KeyedMessage, ProducerConfig}
  */
 object KaProducer {
   def main(args: Array[String]) {
-    val topic = "test"
+    val topic = "pages"
 
     val properties = new Properties
-    properties.put("metadata.broker.list", "localhost:9092")
+    properties.put("metadata.broker.list", "192.168.1.209:9092")
 //    properties.put("key.serializer.class", "kafka.serializer.StringEncoder")
     properties.put("serializer.class", "kafka.serializer.StringEncoder") // 默认的序列化类只支持序列化byte[],所以，对string类型，要提供支持string的序列化类
     properties.put("request.required.acks", "-1")  // -1指定同步到所有节点，牺牲性能获取数据可靠性
