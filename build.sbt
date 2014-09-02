@@ -40,8 +40,6 @@ libraryDependencies += "io.netty" % "netty-all" % "4.0.6.Final"
 
 libraryDependencies +=  "org.scalatest" %% "scalatest" % "1.9.1" % "test"
 
-libraryDependencies += "com.tristanhunt" %% "knockoff" % "0.8.1"
-
 libraryDependencies += "com.google.guava" % "guava" % "14.0"
 
 libraryDependencies += "commons-io" % "commons-io" % "2.4"
@@ -80,9 +78,8 @@ libraryDependencies += "com.netflix.rxjava" % "rxjava-core" % "0.19.2"
 
 libraryDependencies += "com.netflix.rxjava" % "rxjava-scala" % "0.19.2"
 
-libraryDependencies += "org.apache.kafka" % "kafka_2.10" % "0.8.1.1"
-
-// libraryDependencies += "org.apache.hadoop" % "hadoop-client" % "2.4.1"
+libraryDependencies += "org.apache.kafka" % "kafka_2.10" % "0.8.1.1" excludeAll(ExclusionRule(organization = "com.sun.jdmk"),
+    ExclusionRule(organization = "com.sun.jmx"))
 
 libraryDependencies += "com.alibaba" % "fastjson" % "1.1.41"
 
