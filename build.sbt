@@ -40,7 +40,7 @@ libraryDependencies += "io.netty" % "netty-all" % "4.0.6.Final"
 
 libraryDependencies +=  "org.scalatest" %% "scalatest" % "1.9.1" % "test"
 
-libraryDependencies += "com.google.guava" % "guava" % "14.0"
+libraryDependencies += "com.google.guava" % "guava" % "17.0"
 
 libraryDependencies += "commons-io" % "commons-io" % "2.4"
 
