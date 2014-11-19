@@ -86,5 +86,7 @@ libraryDependencies += "org.apache.kafka" % "kafka_2.10" % "0.8.1.1"
 
 libraryDependencies += "com.alibaba" % "fastjson" % "1.1.41"
 
+libraryDependencies += "org.msgpack" % "msgpack" % "0.6.11"
+
 net.virtualvoid.sbt.graph.Plugin.graphSettings
 

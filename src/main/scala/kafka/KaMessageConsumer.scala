@@ -4,7 +4,7 @@ package kafka
 import java.util.Properties
 
 import kafka.consumer._
-import kafka.serializer.{Decoder, StringEncoder}
+import kafka.serializer.Decoder
 
 object KaMessageConsumer {
 
